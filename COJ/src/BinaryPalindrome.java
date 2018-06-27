@@ -6,7 +6,7 @@ public class BinaryPalindrome {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n, k, i, j;
-        boolean a=false;
+        boolean a;
         n = sc.nextInt();
         for (i = 0; i < n; i++) {
             int r1 = sc.nextInt(), r2 = sc.nextInt();

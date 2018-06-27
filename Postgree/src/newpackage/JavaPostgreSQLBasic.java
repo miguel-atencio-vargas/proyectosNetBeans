@@ -2,14 +2,10 @@ package newpackage;
 
 import java.sql.*;
 import java.util.Scanner;
-/*import java.util.Scanner;
+/*
 import java.util.logging.Level;
 import java.util.logging.Logger;*/
 
-/*
- * @author Xules You can follow me on my website http://www.codigoxules.org/en
- * Puedes seguirme en mi web http://www.codigoxules.org).
- */
 public class JavaPostgreSQLBasic {
 
     /**
@@ -46,7 +42,7 @@ public class JavaPostgreSQLBasic {
             System.out.println("Error al conectar con la base de datos de PostgreSQL (" + url + "): " + sqle);
         }
        // System.out.println(connection);
-        //insertData(connection);
+        insertData(connection);
         ejecutarConsulta(connection);
         
     }
@@ -57,9 +53,9 @@ public class JavaPostgreSQLBasic {
             String SQL = "SELECT * FROM productos;";
 
             ResultSet rs = stmt.executeQuery(SQL);
-
+          
             while (rs.next()) {
-                System.out.println(rs.getString("tipo") + " - " + rs.getString("descrip"));
+                System.out.println(rs.getString("tipo") + " - " + rs.getString("descrip")+" - "+rs.getString("precio"));
             }
             rs.close();
             stmt.close();
